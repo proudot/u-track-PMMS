@@ -1,0 +1,32 @@
+macro "Batch Convert txt file from matlab to 32bits floating point tiff file" { convert("tiff"); }
+
+function convert(format) {
+
+	requires("1.33s");
+
+      // prompt user for source directory
+      dir1 = getDirectory("Choose Source Directory ");
+
+      // prompt user for dsetination directory
+      dir2 = getDirectory("Choose Destination Directory ");
+
+      // read in file listing from source directory
+      list = getFileList(dir1);
+
+      // loop over the files in the source directory
+      setBatchMode(true);
+      for (i=0; i<list.length; i++) {
+	l = lengthOf(list[i]);
+	if (substring(list[i], l-3, l) == "txt") {
+	  print(list[i]);
+
+          showProgress(i+1, list.length);
+
+	  run("Text Image... ", "open=[" + dir1 + list[i] + "]");
+
+      	  saveAs(format, dir2+list[i]);
+
+          close();
+	}
+      }
+  }
