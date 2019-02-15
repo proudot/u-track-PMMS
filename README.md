@@ -1,5 +1,8 @@
 u-track-PMMS implements a stochastic smoothing framework for piecewise-stationary dynamic model in multiple particle tracking.
 
+![alt text](https://raw.githubusercontent.com/proudot/u-track-PMMS/master/img/illu.png)
+
+
 # Usage 
 
 The approach is implemented on to of the flexible u-track framework in Matlab. Please see the scriptUsage folder for examples. 
