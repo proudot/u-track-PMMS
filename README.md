@@ -5,9 +5,9 @@ u-track-PMMS implements a stochastic smoothing framework for piecewise-stationar
 
 # Usage 
 
-The approach is implemented on to of the flexible u-track framework in Matlab. Please see the scriptUsage folder for examples. 
+The approach is implemented on top of the flexible u-track platform in Matlab. Please see the scriptUsage folder for examples. 
 
-Tested with Matlab 2013-2016b. 
+Tested with Matlab from  2013 to 2016b. 
 
 # Manuscript 
 
